@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Banana Pi Spec & Price Comparison</title>
+<style>
+:root{--bg:#0b1220;--panel:#121c2e;--line:#263653;--text:#e8eef8;--muted:#aab9cf;--accent:#62d8b5;--warn:#ffd166}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:1450px;margin:auto;padding:32px 22px 60px}h1{font-size:32px;margin:0 0 6px}h2{margin-top:34px;color:var(--accent);font-size:22px}.meta{color:var(--muted);margin-bottom:22px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}.card h3{margin:0 0 8px;color:var(--accent)}.price{font-size:24px;font-weight:700;color:var(--warn)}table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}th,td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{background:#1a2942;color:var(--accent)}tr:last-child td{border-bottom:0}td:first-child{font-weight:600;min-width:160px}ul{padding-left:22px}.note{border-left:4px solid var(--warn);padding:10px 14px;background:#211f1a;color:#f6e7b5}.sources a{color:#8fdcff;word-break:break-all}.small{color:var(--muted);font-size:13px}@media(max-width:900px){.cards{grid-template-columns:1fr}table{font-size:13px;display:block;overflow-x:auto;white-space:normal}h1{font-size:26px}}
+</style></head>
+<body><main>
+<h1>Banana Pi BPI-CM6 vs BPI-M5 vs BPI-M7</h1>
+<div class="meta">Spec & Price Comparison · ตรวจสอบเมื่อ 2026-08-27 14:19 SEAST · ราคาจาก BPI official shop เป็น USD ยังไม่รวม shipping/tax</div>
+<div class="cards">
+<section class="card"><h3>BPI-M5</h3><div class="price">US$129</div><p>Quad-core Cortex-A55, 4GB LPDDR4, 16GB eMMC, USB 3.0 ×4, GbE, HDMI สูงสุด 4K@60</p></section>
+<section class="card"><h3>BPI-CM6</h3><div class="price">US$140–159</div><p>SpacemiT K1 octa-core RISC-V, 2.0 TOPS, Wi‑Fi 6/BT 5.2, industrial −40 ถึง 85°C; IO board เพิ่ม US$19</p></section>
+<section class="card"><h3>BPI-M7</h3><div class="price">US$255–312</div><p>RK3588, NPU 6 TOPS, dual 2.5GbE, 8K codec, M.2 PCIe, 8/16/32GB RAM ตาม SKU</p></section>
+</div>
+<h2>เปรียบเทียบสเปกหลัก</h2><table><thead><tr><th>รายการ</th><th>BPI-CM6</th><th>BPI-M5</th><th>BPI-M7</th></tr></thead><tbody>
+<tr><td>SoC / CPU</td><td>SpacemiT K1 octa-core 64-bit RISC-V X60; RV64GCVB/RVA22/RVV1.0</td><td>Amlogic S905X3 quad-core Cortex-A55 ~2.0GHz</td><td>RK3588: 4× A76 @2.4GHz + 4× A55 @1.8GHz, 8nm</td></tr>
+<tr><td>AI / NPU</td><td>2.0 TOPS จาก RISC-V core</td><td>ไม่ระบุ NPU</td><td>สูงสุด 6 TOPS INT8; INT4/8/16 mixed</td></tr>
+<tr><td>GPU</td><td>IMG BXE-2-32 @819MHz; OpenGL ES3.2/OpenCL3.0/Vulkan1.3</td><td>Mali-G31 MP2 @650MHz</td><td>Mali-G610 MP4</td></tr>
+<tr><td>RAM</td><td>4/8/16GB LPDDR4; default 4GB</td><td>4GB LPDDR4</td><td>8/16/32GB LPDDR4/LPDDR4x; default 8GB (ร้านมี SKU 4GB)</td></tr>
+<tr><td>Storage</td><td>8/16/32/128GB eMMC; default 16GB</td><td>16GB eMMC; MicroSD สูงสุด 256GB</td><td>docs ระบุ 32/64/128GB ใน hardware table แต่ Key Parameter ระบุ 64/128GB</td></tr>
+<tr><td>Network</td><td>RTL8211F/RGMII; Wi‑Fi 6 + BT5.2 onboard</td><td>GbE; Wi‑Fi ผ่าน expansion/USB dongle</td><td>2×2.5GbE; Wi‑Fi6 + BT5</td></tr>
+<tr><td>USB</td><td>Core: 1×USB3 + 2×USB2; IO เพิ่ม USB-A/USB-C</td><td>4×USB3.0</td><td>USB3 ×1, USB-C3.1 DP/OTG ×1, USB2 ×1</td></tr>
+<tr><td>Video</td><td>HDMI1.4, MIPI DSI; ขึ้นกับ carrier/IO</td><td>HDMI2.1 สูงสุด 4K@60 HDR</td><td>HDMI2.1 สูงสุด 8K@60; DSI 4K@60; DP1.4 8K@30</td></tr>
+<tr><td>Camera</td><td>Core 3× MIPI CSI; IO 2× CSI 4-lane</td><td>ไม่ระบุในสรุป hardware</td><td>2× MIPI CSI 4-lane</td></tr>
+<tr><td>Expansion</td><td>Core PCIe2.1 5-lane; IO 2×M.2 M-Key 2-lane; 26-pin GPIO</td><td>40-pin GPIO, UART/I²C/SPI/PWM</td><td>40-pin compatible; UART/SPI/I²C/I²S/PWM/ADC</td></tr>
+<tr><td>Power / size</td><td>IO: 12V DC-in; core 40×55mm, IO 56×85mm</td><td>5V@3A USB-C; 85×56mm, 48g</td><td>USB-C PD; 92×62mm, 46.6g</td></tr>
+<tr><td>Temperature</td><td><b>−40°C ถึง 85°C</b></td><td>ไม่ระบุ</td><td>0°C ถึง 80°C</td></tr>
+</tbody></table>
+<h2>ราคาตาม configuration</h2><table><thead><tr><th>รุ่น / package</th><th>ราคา USD</th><th>สถานะจากหน้า shop</th></tr></thead><tbody>
+<tr><td>BPI-M5 — product page (4GB/16GB ตาม docs)</td><td><b>US$129</b></td><td>In stock ใน structured offer</td></tr>
+<tr><td>BPI-CM6 core board</td><td><b>US$140</b></td><td>In stock ใน structured offer</td></tr><tr><td>BPI-CM6 IO board</td><td><b>US$19</b></td><td>In stock ใน structured offer</td></tr><tr><td>BPI-CM6 core + IO</td><td><b>US$159</b></td><td>In stock ใน structured offer</td></tr>
+<tr><td>BPI-M7 — 4GB LPDDR4 + 32GB eMMC</td><td><b>US$255</b></td><td>In stock ใน structured offer</td></tr><tr><td>BPI-M7 — 32GB LPDDR4x + 128GB eMMC</td><td><b>US$257</b></td><td>In stock ใน structured offer</td></tr><tr><td>BPI-M7 — 8GB LPDDR4x + 64GB eMMC</td><td><b>US$312</b></td><td>In stock ใน structured offer</td></tr>
+</tbody></table>
+<h2>ข้อสังเกต</h2><div class="note"><ul><li>M7 มีข้อมูล storage ไม่ตรงกันระหว่าง sections ใน docs ควรยึด SKU จริงก่อนสั่งซื้อ</li><li>CM6 เป็น compute module; ใช้งานเป็นบอร์ดพร้อมพอร์ตต้องมี IO/carrier board</li><li>M5 คุ้มราคาสำหรับงานทั่วไป แต่ Wi‑Fi/BT ไม่ได้ onboard ตาม hardware table</li><li>ราคาเป็น snapshot จาก official shop ไม่ใช่ใบเสนอราคา และอาจเปลี่ยนตาม stock/ตัวเลือก</li></ul></div>
+<h2>Sources</h2><div class="sources"><ul>
+<li><a href="https://docs.banana-pi.org/en/BPI-CM6/BananaPi_BPI-CM6">CM6 documentation</a></li><li><a href="https://docs.banana-pi.org/en/BPI-M5/BananaPi_BPI-M5">M5 documentation</a></li><li><a href="https://docs.banana-pi.org/en/BPI-M7/BananaPi_BPI-M7">M7 documentation</a></li><li><a href="https://www.bpi-shop.com/products/banana-pi-bpi-cm6-spacemit-k1-8-core-risc-v.html">CM6 official shop</a></li><li><a href="https://www.bpi-shop.com/products/banana-pi-bpi-m5.html">M5 official shop</a></li><li><a href="https://www.bpi-shop.com/products/banana-pi-bpi-m7-with-rockchip-rk3588-8-16-32g-ram-64-128g-emmc-wifi6-support.html">M7 official shop</a></li></ul><p class="small">ราคาได้จาก structured product offers ที่ official shop ส่งกลับ ณ เวลาตรวจสอบ</p></div>
+</main></body></html>
